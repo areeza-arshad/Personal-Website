@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    overflow-x: hidden;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #555555;
+}
+/* NAVBAR */
+.nav-list {
+    display: flex;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+.nav-list li  {
+    background-color: #FFB3C1;
+    flex-grow: 1;
+    text-align: center;
+    padding: 0.3rem;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+}
+.nav-list li:hover {
+    background-color: #3a3a3a;
+}
+.nav-list li a {
+    color: #ffff;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: 'Ubuntu', serif;
+}
+.home {
+    display: flex;
+    align-items: center;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 1.5rem;
+    padding: 0.4rem 0;
+}
+.left-arrow i {
+    color: #ffff;
+}
+.right-arrow i {
+    color: #ffff;
+}
+#loader i {
+    color: #ffff;
+}
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    width: 70rem;
+    border-radius: 1rem;
+    background-color: #FFB3C1;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+input {
+    color: #fff;
+}
+::placeholder {
+    color:#ebebeb;
+    font-family: 'Ubuntu', serif;
+}
+#search {
+    outline: 0;
+    border: 0;
+    background: transparent;
+    margin-left: 0.3rem;
+}
+.search-box i {
+    color: #fff;
+}
+.search-box-details i {
+    color: #fff;
+}
+.divider{
+    width: 100%;
+    height: 2px;
+    background-color: #ebebeb;
+}
+.notebook-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: #FFCCD5;
+    border-radius: 0.8rem;
+    padding: 3rem 2.5rem 0;
+}
+.round {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    background-color: #555555;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+.round:nth-child(1) { top: 5rem; left: 0.6rem; }
+.round:nth-child(2) { top: 10rem; left: 0.6rem; }
+.round:nth-child(3) { top: 15rem; left: 0.6rem; }
+.round:nth-child(4) { top: 20rem; left: 0.6rem; }
+.round:nth-child(5) { top: 25rem; left: 0.6rem; }
+.round:nth-child(6) { top: 30rem; left: 0.6rem; }
+.round:nth-child(7) { top: 35rem; left: 0.6rem; }
+.notebook {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: repeating-linear-gradient(#FFB3C1 -8px,#FFB3C1 24px,#ffcccc 25px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+.notebook::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 2px;
+    height: 100vh;
+    background-color: #555555;
+}
+.heading {
+    color: #C9184A;
+    font-size: 1.5rem;
+    font-family: 'Pacifico';
+    text-align: center;
+    padding: 3rem 0 0;
+}
+.cloud {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    left: -100px;
+}
+@keyframes moveClouds {
+    from {
+        left: -100px;
+    }
+    to {
+        left: 100%;
+    }
+}
+.home-content {
+    display: grid;
+    gap: 2rem;
+    padding: 2.5rem 0 0 5rem;
+    font-family: 'Indie Flower', cursive;
+}
+.line1 {
+    color: #590D22;
+    display: flex;
+    border-right: 3px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+    font-size: 1.5rem;
+}
+.line2 {
+    color: #800F2F;
+    display: flex;
+    align-items: center;
+    border-right: 3px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+    font-size: 1.5rem;
+}
+.line3 {
+    color: #A4133C;
+    display: flex;
+    border-right: 3px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+    /* animation: typing 3s steps(30, end) forwards; */
+    /* animation: typing 3s steps(30, end) forwards, 0.7s; */
+    font-size: 1.5rem;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink {
+    100% { border-color: transparent; }
+}
